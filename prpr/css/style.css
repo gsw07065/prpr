@@ -62,6 +62,7 @@ header ul.nav > li{
   position: relative;
   font-size: 19px;
   line-height: 80px;
+  letter-spacing: 2px;
 }
 
 header ul.nav ul.sub{
@@ -78,6 +79,7 @@ header ul.nav:hover > li ul.sub{
 header ul.nav ul.sub li{
   line-height: 35px;
   font-size: 16px;
+  letter-spacing: 0;
 }
 header ul.nav ul.sub li:hover{
   text-decoration:underline;
@@ -109,13 +111,72 @@ header ul.right{
 
 
 /* s2 시작 */
-.s2 h3.sTitle{
+ h3.sTitle{
   width: 100%; margin: 0 auto; text-align: center;
   font-family: cocoEB;
   font-size: 25px;
-  letter-spacing: 10px;
   text-decoration: underline;
-  text-underline-offset: 7px;
+  text-underline-offset: 15px;
   text-decoration-thickness: 5px;
-  line-height: 200px;
+  margin: 150px 0;
+}
+.s2 ul.contents{}
+.s2 ul.contents li{
+  display: flex; align-items: center;
+  margin-bottom: 150px;
+}
+.s2 ul.contents li:nth-child(2){
+  flex-direction: row-reverse;
+}
+.s2 ul.contents li>p.image{
+  width: 70%; overflow: hidden;
+}
+.s2 ul.contents li:nth-child(odd)>p.image{
+  border-radius: 0 350px 350px 0;
+}
+.s2 ul.contents li:nth-child(2)>p.image{
+  border-radius: 350px 0 0 350px;
+}
+.s2 ul.contents li>p.image img{
+  width: 100%; object-fit: cover;
+}
+.s2 ul.contents li .txt{position: relative;}
+.s2 ul.contents li .txt a{
+  text-align: center;
+  display: flex; flex-direction: column;
+  gap: 30px;
+}
+.s2 ul.contents li:nth-child(odd) .txt{
+  margin-left: -30px;
+}
+.s2 ul.contents li:nth-child(2) .txt{
+  margin-right: -30px; z-index: 2;
+}
+.s2 ul.contents li:nth-child(odd) .txt:before{
+  content: "";
+  background-image: url(../images/s2_union.png);
+  background-size: contain;
+  width: 130px; height: 80px;
+  background-repeat: no-repeat;
+  position: absolute; right: -20px; top: -20px;
+}
+.s2 ul.contents li:nth-child(2) .txt:before{
+  content: "";
+  background-image: url(../images/s2_union.png);
+  background-size: contain;
+  width: 130px; height: 80px;
+  background-repeat: no-repeat;
+  position: absolute; left: -20px; top: -20px;
+}
+.s2 ul.contents li .txt h2{
+  font-family: cocoB; 
+  font-size: 50px; letter-spacing: 5px;
+  line-height: 50px;
+  position: relative;
+}
+
+.s2 ul.contents li .txt p{
+  font-family: notoR;
+  line-height: 35px; color: #777;
+  font-size: 18px;
 }
