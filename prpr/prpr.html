@@ -6,8 +6,10 @@
   <title>prpr</title>
   <link rel="stylesheet" href="css/xeicon.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
   <link rel="stylesheet" href="css/style.css">
-  
+
   <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
   <script src="js/jquery.js"></script>
 </head>
@@ -45,16 +47,86 @@
         </ul>
     </header>
 
-    <div class="s0">
-      <!-- swiper 활용 -->
-      <img src="images/s0_main_bg_1.png" alt="s0_main_bg">
-      <img src="images/s0_main_exclude_1&3.png" alt="s0_main_exclude">
-      <img src="images/s0_main_word_1.png" alt="s0_main_word">
+    <div class="s0 swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/s0_main_bg_1.png" alt="s0_main_bg">
+          <img src="images/s0_main_exclude_1&3.png" alt="s0_main_exclude">
+          <img src="images/s0_main_word_1.png" alt="s0_main_word">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/s0_main_bg_2.jpg" alt="s0_main_bg">
+          <img src="images/s0_main_exclude_2.png" alt="s0_main_exclude">
+          <img src="images/s0_main_word_2&4.png" alt="s0_main_word">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/s0_main_bg_3.png" alt="s0_main_bg">
+          <img src="images/s0_main_exclude_1&3.png" alt="s0_main_exclude">
+          <img src="images/s0_main_word_3.png" alt="s0_main_word">
+        </div>
+        <div class="swiper-slide">
+          <img src="images/s0_main_bg_4.png" alt="s0_main_bg">
+          <img src="images/s0_main_exclude_4.png" alt="s0_main_exclude">
+          <img src="images/s0_main_word_2&4.png" alt="s0_main_word">
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
     </div>
 
     <div class="s1">
       <h3 class="sTitle">B E S T &nbsp; P R O D U C T</h3>
-      <!-- contents swiper 활용 -->
+      <div class="swiper mySwiper1" data-aos="fade-up">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_1.jpg" alt="s1_img"></p>
+              <p>Sofa Side Table</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_2.jpg" alt="s1_img"></p>
+              <p>Side Desk Table</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_3.jpg" alt="s1_img"></p>
+              <p>Circular Shelf</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_4.jpg" alt="s1_img"></p>
+              <p>Coffee Table</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_5.jpg" alt="s1_img"></p>
+              <p>Circle Table</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_6.jpg" alt="s1_img"></p>
+              <p>Circular Drawer</p>
+            </a>
+          </div>
+          <div class="swiper-slide">
+            <a href="#">
+              <p><img src="images/s1_img_7.jpg" alt="s1_img"></p>
+              <p>Multy Corner Shelf</p>
+            </a>
+          </div>
+        </div>
+        <div id="btn">
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+      </div>
     </div>
 
     <div class="s2">
@@ -100,7 +172,7 @@
       </div>
     </div>
 
-    <div class="s4"> <!-- flex -->
+    <div class="s4">
       <p><img src="images/s4_circle_word.png" alt="s4_circle_word"></p>
       <div class="s4_flex">
         <h3 class="sTitle">B R A N D &nbsp; S T O R Y</h3>
@@ -151,6 +223,8 @@
   </div>
 
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
   <script>
      AOS.init({
       offset:300,
@@ -158,6 +232,33 @@
       duration:700,
       delay:150,
      });
+
+     var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 1,
+      /* spaceBetween: 30, */
+      loop: true,
+      speed: 1000,
+      autoplay:{
+        delay: 5000,
+      },
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
+    var swiper1 = new Swiper(".mySwiper1", {
+      slidesPerView: 4,
+      spaceBetween: 0,
+      loop: true,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   </script>
 </body>
 </html>

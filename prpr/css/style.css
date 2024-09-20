@@ -25,7 +25,6 @@
 ul{list-style: none;}
 a{text-decoration: none; color: #000;}
 
-
 #wrap{
   width: 100%; margin: 0 auto;
   overflow-x: hidden;
@@ -61,12 +60,11 @@ header .head_bg{
 }
 header .logo{margin-top: 10px;}
 header ul.nav{
-  display: flex; /* gap: 150px; */
+  display: flex;
   font-family: cocoB;
   position: relative;
   height: 100%;
 }
-
 header ul.nav > li{
   position: relative;
   font-size: 19px;
@@ -74,7 +72,9 @@ header ul.nav > li{
   letter-spacing: 2px;
   padding: 0 70px;
 }
-
+header ul.nav > li:hover>a{
+  color: #FF7700;
+}
 header ul.nav ul.sub{
   position: absolute; z-index: 99;
   top: 82px; left: 50%;
@@ -107,7 +107,6 @@ header ul.right{
 .s0{
   width: 100%; height: 100vh;
   position: relative;
-  
 }
 .s0 img{
   position: absolute; left: 50%; top: 0;
@@ -117,10 +116,57 @@ header ul.right{
   object-fit: cover;
 }
 
+
 /* s1 시작 */
+.s1{
+  width: 100%; height: 100vh;
+}
+.mySwiper1{
+  width: 87%;
+  position: relative;
+}
+.mySwiper1 .swiper-wrapper{
+  width: 100%; height: 100%;
+  text-align: center;
+}
+.mySwiper1 .swiper-slide{
+  width: 400px;
+  border: 2px solid #000;
+  box-sizing: border-box;
+  margin-left: -2px;
+  border-radius: 200px 200px 0 0;
+  overflow: hidden;
+}
+.mySwiper1 .swiper-slide:first-child{margin-left: 0;}
+.mySwiper1 .swiper-slide a p{overflow: hidden;}
+.mySwiper1 .swiper-slide a p:nth-child(1){
+  width: 100%; aspect-ratio: 1 / 1.15; font-size: 0;
+}
+.mySwiper1 .swiper-slide a p img{
+  width: 100%; height: 100%; object-fit: cover;
+  transition: .5s;
+}
+.mySwiper1 .swiper-slide a:hover p img{
+  transform: scale(1.1);
+}
+.mySwiper1 .swiper-slide a p:nth-child(2){
+  line-height: 50px;
+  border-top: 2px solid #000;
+  font-family: cocoB;
+  letter-spacing: 3px;
+  transition: color .3s, background-color .3s;
+}
+.mySwiper1 .swiper-slide a:hover p:nth-child(2){
+  background-color: #000;
+  color: #fff;
+}
+.mySwiper1 #btn{
+  width: 100%;
+}
 
 
 /* s2 시작 */
+.s2{margin-top: 30px;}
  h3.sTitle{
   width: 100%; margin: 0 auto; text-align: center;
   font-family: cocoEB;
@@ -128,7 +174,8 @@ header ul.right{
   text-decoration: underline;
   text-underline-offset: 15px;
   text-decoration-thickness: 5px;
-  margin: 150px 0;
+  padding: 170px 0 130px;
+  box-sizing: border-box;
 }
 .s2 ul.contents{}
 .s2 ul.contents li{
@@ -222,7 +269,7 @@ header ul.right{
 }
 .s3 .txt div{
   font-family: notoR;
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 10px;
 }
 
@@ -245,7 +292,7 @@ header ul.right{
   
 }
 .s4 > p img{
-  width: 100%; aspect-ratio: 1 / 1;
+  width: 100%;
   object-fit: cover;
   animation: circleWord 60s linear infinite;
 }
@@ -261,14 +308,14 @@ header ul.right{
   align-items: center;
   padding: 0 4%; box-sizing: border-box;
 }
-.s4 .s4_flex h3{
+.s4 .s4_flex h3.sTitle{
   width: 30%; text-align: left;
   color: #fff;
 }
 .s4 .s4_flex .rTxt{
   text-align: center;
   display: flex; flex-direction: column;
-  gap: 80px;
+  gap: 80px; flex-grow: 1;
 }
 .s4 .s4_flex .rTxt p{
   font-family: notoR;
@@ -302,8 +349,12 @@ footer>ul>li:nth-child(1){
   padding: 35px;
 }
 footer>ul>li:nth-child(1) .sub li{
-  line-height: 30px;
+  line-height: 25px;
   font-family: notoR;
+  font-size: 14px;
+}
+footer>ul>li:nth-child(1) .sub li:last-child{
+  color: #888;
 }
 footer>ul>li:nth-child(1) .sub li span{
   font-family: notoM;
@@ -331,8 +382,10 @@ footer>ul>li:nth-child(2)>div{
   padding: 35px; width: 50%;
 }
 footer>ul>li:nth-child(2) .sup .sub li{
-  line-height: 35px;
+  line-height: 30px;
   position: relative; z-index: 10;
+  font-family: notoR;
+  font-size: 14px;
 }
 footer>ul>li:nth-child(2) .fol div a{
   margin-right: 10px;
