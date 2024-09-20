@@ -35,25 +35,33 @@ a{text-decoration: none; color: #000;}
 /* header 시작 */
 header{
   width: 100%; height: 80px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 50px; box-sizing: border-box;
   position: fixed; z-index: 999;
   background-color: rgba(255, 255, 255, .3);
   text-align: center;
   border-bottom: 2px solid #000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: .5s;
 }
 /* header::after{
   content: "";
   position: absolute;
-  top: 82px; left: 0;
+  top: 80px; left: 0;
   width: 100%; height: 250px;
-  background-color: rgba(255, 255, 255, .3); z-index: 98;
+  background-color: #fff; z-index: 98;
+  opacity: 0;
 } */
+header .head_bg{
+  position: absolute; top: 80px; left: 0;
+  width: 100%;
+  background-color: #fff; z-index: 98;
+  transition: .5s; height: 0;
+}
 header .logo{margin-top: 10px;}
 header ul.nav{
-  display: flex; gap: 150px;
+  display: flex; /* gap: 150px; */
   font-family: cocoB;
   position: relative;
   height: 100%;
@@ -64,6 +72,7 @@ header ul.nav > li{
   font-size: 19px;
   line-height: 80px;
   letter-spacing: 2px;
+  padding: 0 70px;
 }
 
 header ul.nav ul.sub{
@@ -129,16 +138,16 @@ header ul.right{
 .s2 ul.contents li:nth-child(2){
   flex-direction: row-reverse;
 }
-.s2 ul.contents li>p.image{
-  width: 70%; overflow: hidden;
+.s2 ul.contents li .image{
+  width: 65%; overflow: hidden;
 }
-.s2 ul.contents li:nth-child(odd)>p.image{
+.s2 ul.contents li:nth-child(odd) .image{
   border-radius: 0 350px 350px 0;
 }
-.s2 ul.contents li:nth-child(2)>p.image{
+.s2 ul.contents li:nth-child(2) .image{
   border-radius: 350px 0 0 350px;
 }
-.s2 ul.contents li>p.image img{
+.s2 ul.contents li .image img{
   width: 100%; object-fit: cover;
 }
 .s2 ul.contents li .txt{position: relative;}
@@ -160,6 +169,7 @@ header ul.right{
   width: 130px; height: 80px;
   background-repeat: no-repeat;
   position: absolute; right: -20px; top: -20px;
+  transition: .4s;
 }
 .s2 ul.contents li:nth-child(2) .txt:before{
   content: "";
@@ -168,6 +178,11 @@ header ul.right{
   width: 130px; height: 80px;
   background-repeat: no-repeat;
   position: absolute; left: -20px; top: -20px;
+  transition: .4s;
+}
+.s2 ul.contents li .txt:hover::before{
+  background-image: url(../images/s2_union_hov.png);
+  width: 183px; height: 112px;
 }
 .s2 ul.contents li .txt h2{
   font-family: cocoB; 
@@ -175,9 +190,157 @@ header ul.right{
   line-height: 50px;
   position: relative;
 }
-
 .s2 ul.contents li .txt p{
   font-family: notoR;
   line-height: 35px; color: #777;
   font-size: 18px;
+}
+
+
+
+/* s3 시작 */
+.s3{
+  width: 100%; height: 100vh;
+  background-image: url(../images/s3_bg_img.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.s3 .txt{
+  text-align: center;
+}
+.s3 .txt h1{
+  font-family: cocoEB;
+  color: #FF7700;
+  font-size: 115px;
+  text-transform: uppercase;
+  letter-spacing: 30px;
+  margin-bottom: 50px;
+}
+.s3 .txt div{
+  font-family: notoR;
+  font-size: 30px;
+  letter-spacing: 10px;
+}
+
+
+
+/* s4 시작 */
+.s4{
+  width: 100%; height: 100vh;
+  background-image: url(../images/s4_bg_img.png);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.s4 > p{
+  position: absolute; z-index: 5;
+  left: 60%; top: 50%;
+  transform: translate(-60%, -50%);
+  width: 56%; aspect-ratio: 1 / 1;
+  
+}
+.s4 > p img{
+  width: 100%; aspect-ratio: 1 / 1;
+  object-fit: cover;
+  animation: circleWord 60s linear infinite;
+}
+@keyframes circleWord {
+  0%{transform: rotate(0);}
+  100%{transform: rotate(360deg);}
+}
+
+.s4 .s4_flex{
+  width: 100%; height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 4%; box-sizing: border-box;
+}
+.s4 .s4_flex h3{
+  width: 30%; text-align: left;
+  color: #fff;
+}
+.s4 .s4_flex .rTxt{
+  text-align: center;
+  display: flex; flex-direction: column;
+  gap: 80px;
+}
+.s4 .s4_flex .rTxt p{
+  font-family: notoR;
+  font-size: 20px; line-height: 40px;
+  position: relative;
+}
+.s4 .s4_flex .rTxt p::after{
+  content: "";
+  position: absolute; left: 50%; bottom: -40px;
+  transform: translateX(-50%);
+  width: 50px; height: 3px;
+  background-color: #000;
+}
+.s4 .s4_flex .rTxt h4{
+  font-family: notoB;
+  font-size: 18px; line-height: 40px;
+}
+.s4 .none{width: 20%; height: 100%;}
+
+
+
+/* footer 시작 */
+footer{position: relative;}
+footer>ul{
+  display: flex;
+  border: 2px solid #ccc;
+  box-sizing: border-box;
+}
+footer>ul>li:nth-child(1){
+  width: 50%;
+  padding: 35px;
+}
+footer>ul>li:nth-child(1) .sub li{
+  line-height: 30px;
+  font-family: notoR;
+}
+footer>ul>li:nth-child(1) .sub li span{
+  font-family: notoM;
+  margin-right: 15px;
+}
+footer>ul>li:nth-child(1) .sub li:first-child span:nth-child(2){
+  margin-left: 60px; position: relative;
+}
+footer>ul>li:nth-child(1) .sub li:first-child span:nth-child(2)::before{
+  content: "";
+  position: absolute; left: -31px; top: 50%;
+  transform: translateY(-50%);
+  width: 2px; height: 14px;
+  background-color: #ccc;
+}
+footer>ul>li h4{
+  font-family: cocoB;
+  margin-bottom: 20px;
+}
+footer>ul>li:nth-child(2){
+  display: flex; width: 50%;
+}
+footer>ul>li:nth-child(2)>div{
+  border-left: 2px solid #ccc;
+  padding: 35px; width: 50%;
+}
+footer>ul>li:nth-child(2) .sup .sub li{
+  line-height: 35px;
+  position: relative; z-index: 10;
+}
+footer>ul>li:nth-child(2) .fol div a{
+  margin-right: 10px;
+}
+footer>p{
+  position: absolute; bottom: 2px; right: 2px;
+  font-size: 0;
+}
+footer>p img{
+  width: 100%; height: 100%; object-fit: cover;
 }

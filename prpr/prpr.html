@@ -5,39 +5,44 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>prpr</title>
   <link rel="stylesheet" href="css/xeicon.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
+  
+  <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+  <script src="js/jquery.js"></script>
 </head>
 <body>
   <div id="wrap">
 
     <header>
-      <p class="logo"><img src="images/header_logo.png" alt="header_logo"></p>
-      <ul class="nav">
-        <li>
-          <a href="#">BRAND</a>
-          <ul class="sub">
-            <li><a href="#">TABLE</a></li>
-            <li><a href="#">DRAWER</a></li>
-            <li><a href="#">SHELF/RACK</a></li>
-            <li><a href="#">GOOD/ACCESSORIES</a></li>
-            <li><a href="#">CUSTOMIZING</a></li>
-          </ul>
-        </li>
-        <li><a href="#">PRODUCT</a></li>
-        <li><a href="#">NOTICE</a></li>
-        <li>
-          <a href="#">CONTENTS</a>
-          <ul class="sub">
-            <li><a href="#">STORY</a></li>
-            <li><a href="#">EXHIBIT</a></li>
-          </ul>
-        </li>
-      </ul>
-      <ul class="right">
-        <li><a href="#"><i class="xi-user"></i></a></li>
-        <li><a href="#"><i class="xi-cart"></i></a></li>
-        <li><a href="#"><i class="xi-search"></i></a></li>
-      </ul>
+      <div class="head_bg"></div>
+        <p class="logo"><img src="images/header_logo.png" alt="header_logo"></p>
+        <ul class="nav">
+          <li>
+            <a href="#">BRAND</a>
+            <ul class="sub">
+              <li><a href="#">TABLE</a></li>
+              <li><a href="#">DRAWER</a></li>
+              <li><a href="#">SHELF/RACK</a></li>
+              <li><a href="#">GOOD/ACCESSORIES</a></li>
+              <li><a href="#">CUSTOMIZING</a></li>
+            </ul>
+          </li>
+          <li><a href="#">PRODUCT</a></li>
+          <li><a href="#">NOTICE</a></li>
+          <li>
+            <a href="#">CONTENTS</a>
+            <ul class="sub">
+              <li><a href="#">STORY</a></li>
+              <li><a href="#">EXHIBIT</a></li>
+            </ul>
+          </li>
+        </ul>
+        <ul class="right">
+          <li><a href="#"><i class="xi-user"></i></a></li>
+          <li><a href="#"><i class="xi-cart"></i></a></li>
+          <li><a href="#"><i class="xi-search"></i></a></li>
+        </ul>
     </header>
 
     <div class="s0">
@@ -54,11 +59,11 @@
 
     <div class="s2">
       <h3 class="sTitle">C O L L E C T I O N</h3>
-      <!-- contents 휠이벤트 aos 활용 (노랑풍선 참고) -->
       <ul class="contents">
         <li>
-          <p class="image"><img src="images/s2_img_1.jpg" alt="s2_img"></p>
-          <div class="txt">
+          <div class="image" data-aos="fade-right"><img src="images/s2_img_1.jpg" alt="s2_img"></div>
+          <div class="txt" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
             <a href="#">
               <h2>Minimal<br>Stackable Shelf</h2>
               <p>가로, 세로 어떤 방향이든 원하는 형태로<br>인테리어 가능한 테이블 컬렉션</p>
@@ -66,8 +71,9 @@
           </div>
         </li>
         <li class="reverse">
-          <p class="image"><img src="images/s2_img_2.jpg" alt="s2_img"></p>
-          <div class="txt">
+          <div class="image" data-aos="fade-left"><img src="images/s2_img_2.jpg" alt="s2_img"></div>
+          <div class="txt" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom" data-aos-delay="350">
             <a href="#">
               <h2>Side Desk Table</h2>
               <p>나만의 공간에 맞는 형태로<br>높낮이를 조절하는 데스크 컬렉션</p>
@@ -75,10 +81,11 @@
           </div>
         </li>
         <li>
-          <p class="image"><img src="images/s2_img_3.jpg" alt="s2_img"></p>
-          <div class="txt">
+          <div class="image" data-aos="fade-right"><img src="images/s2_img_3.jpg" alt="s2_img"></div>
+          <div class="txt" data-aos="fade-up"
+          data-aos-anchor-placement="bottom-bottom" data-aos-delay="350">
             <a href="#">
-              <h2>Multy<br>corner shelf</h2>
+              <h2>Multy Corner Shelf</h2>
               <p>여러 각도로 공간에 맞춰<br>활용하는 선반 멀티 컬렉션</p>
             </a>
           </div>
@@ -87,18 +94,21 @@
     </div>
 
     <div class="s3">
-      <div class="txt"> <!-- txt 휠이벤트 aos 활용 -->
+      <div class="txt" data-aos="fade-up">
         <h1>‘Proprement’</h1>
-        <p>본질 그대로의</p>
+        <div data-aos="fade-up" data-aos-delay="250" >본질 그대로의</div>
       </div>
     </div>
 
     <div class="s4"> <!-- flex -->
-      <h3 class="sTitle">B R A N D &nbsp; S T O R Y</h3> <!-- rotate? -->
-      <p><img src="images/s4_circle_word.png" alt="s4_circle_word"></p> <!-- ani적용 -->
-      <div class="rTxt"> <!-- txt 휠이벤트 aos 활용 -->
-        <p>철이라는 재료 본질 그대로의 특성을 살려,<br>시대를 뛰어넘는 클래식한 디자인과<br>최고급 스틸을 사용한<br>철제 디자인 가구 브랜드 입니다.</p>
-        <h4>Designed by Korean designer and author,<br>Production in Korea</h4>
+      <p><img src="images/s4_circle_word.png" alt="s4_circle_word"></p>
+      <div class="s4_flex">
+        <h3 class="sTitle">B R A N D &nbsp; S T O R Y</h3>
+        <div class="rTxt" data-aos="fade-up" data-aos-duration="1000">
+          <p>철이라는 재료 본질 그대로의 특성을 살려,<br>시대를 뛰어넘는 클래식한 디자인과<br>최고급 스틸을 사용한<br>철제 디자인 가구 브랜드 입니다.</p>
+          <h4>Designed by Korean designer and author,<br>Production in Korea</h4>
+        </div>
+        <div class="none"></div>
       </div>
     </div>
 
@@ -118,24 +128,36 @@
           </ul>
         </li>
         <li>
-          <h4>SUPPORT</h4>
-          <div class="sub">
-            <a href="#">FAQ</a>
-            <a href="#">이용안내</a>
-            <a href="#">개인정보처리방침</a>
-            <a href="#">이용약관</a>
+          <div class="sup">
+            <h4>SUPPORT</h4>
+            <ul class="sub">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">이용안내</a></li>
+              <li><a href="#">개인정보처리방침</a></li>
+              <li><a href="#">이용약관</a></li>
+            </ul>
           </div>
-        </li>
-        <li>
-          <h4>FOLLOW</h4>
-          <div>
-            <a href="#"><img src="images/footer_icon_instar.png" alt="footer_icon"></a>
-            <a href="#"><img src="images/footer_icon_youtube.png" alt="footer_icon"></a>
+          <div class="fol">
+            <h4>FOLLOW</h4>
+            <div>
+              <a href="#"><img src="images/footer_icon_instar.png" alt="footer_icon"></a>
+              <a href="#"><img src="images/footer_icon_youtube.png" alt="footer_icon"></a>
+            </div>
           </div>
         </li>
       </ul>
       <p><img src="images/footer_logo.png" alt="footer_logo"></p>
     </footer>
   </div>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+     AOS.init({
+      offset:300,
+      easing:"ease",
+      duration:700,
+      delay:150,
+     });
+  </script>
 </body>
 </html>
