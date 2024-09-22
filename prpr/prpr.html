@@ -50,23 +50,22 @@
     <div class="s0 swiper mySwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide">
-          <img class="bg" src="images/s0_main_bg_1.png" alt="s0_main_bg">
-          <img src="images/s0_main_exclude_1&3.png" alt="s0_main_exclude">
+          <img src="images/s0_main_bg_1&3_orange.png" alt="orange">
+          <p><img src="images/s0_main_bg_1_exclude.png" alt="s0_main_bg"></p>
           <img src="images/s0_main_word_1.png" alt="s0_main_word">
         </div>
         <div class="swiper-slide">
-          <img class="bg" src="images/s0_main_bg_2.jpg" alt="s0_main_bg">
-          <img src="images/s0_main_exclude_2.png" alt="s0_main_exclude">
+          <p><img src="images/s0_main_bg_2_exclude.png" alt="s0_main_bg"></p>
           <img src="images/s0_main_word_2&4.png" alt="s0_main_word">
         </div>
         <div class="swiper-slide">
-          <img class="bg" src="images/s0_main_bg_3.png" alt="s0_main_bg">
-          <img src="images/s0_main_exclude_1&3.png" alt="s0_main_exclude">
+          <img src="images/s0_main_bg_1&3_orange.png" alt="orange">
+          <p><img src="images/s0_main_bg_3_exclude.png" alt="s0_main_bg"></p>
           <img src="images/s0_main_word_3.png" alt="s0_main_word">
         </div>
         <div class="swiper-slide">
-          <img class="bg" src="images/s0_main_bg_4.png" alt="s0_main_bg">
-          <img src="images/s0_main_exclude_4.png" alt="s0_main_exclude">
+          <img src="images/s0_main_bg_4_black.png" alt="black">
+          <p><img src="images/s0_main_bg_4_exclude.png" alt="s0_main_bg"></p>
           <img src="images/s0_main_word_2&4.png" alt="s0_main_word">
         </div>
       </div>
@@ -142,7 +141,7 @@
           <div class="txt" data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom" data-aos-delay="300">
             <a href="#">
-              <h2>Minimal<br>Stackable Shelf</h2>
+              <h2>Minimal <br>Stackable Shelf</h2>
               <p>가로, 세로 어떤 방향이든 원하는 형태로<br>인테리어 가능한 테이블 컬렉션</p>
             </a>
           </div>
@@ -162,7 +161,7 @@
           <div class="txt" data-aos="fade-up"
           data-aos-anchor-placement="bottom-bottom" data-aos-delay="350">
             <a href="#">
-              <h2>Multy<br>Corner Shelf</h2>
+              <h2>Multy <br>Corner Shelf</h2>
               <p>여러 각도로 공간에 맞춰<br>활용하는 선반 멀티 컬렉션</p>
             </a>
           </div>
@@ -245,7 +244,7 @@
       loop: true,
       speed: 1000,
       autoplay:{
-        delay: 5000,
+        delay: 6000,
       },
      /*  pagination: {
         el: ".swiper-pagination",
@@ -259,14 +258,14 @@
         el: ".swiper-scrollbar",
         clickable: true,
       },
-      /* on: {
+      on: {
         slideChange:function(){
           for(let i=0; i<4; i++){
-            slide[i].querySelector(".bg").classList.remove("on");
+            slide[i].querySelector("p").classList.remove("on");
           }
-          slide[this.realIndex].querySelector(".bg").classList.add("on");
+          slide[this.realIndex].querySelector("p").classList.add("on");
         }
-      } */
+      }
     });
     var swiper1 = new Swiper(".mySwiper1", {
       slidesPerView: 4,

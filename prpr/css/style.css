@@ -103,21 +103,31 @@ header ul.right > li:hover>a{
   width: 100%; height: 100vh;
   position: relative;
 }
-.s0 img{
-  position: absolute; left: 50%; top: 0;
-  transform: translateX(-50%);
-  margin: 0 auto; text-align: center;
+.s0 .swiper-slide{
+  display: flex; align-items: center;
   width: 100%; height: 100%;
+}
+.s0 p{
+  width: 70%; height: 70%;
+  position: relative;
+  margin: 0 auto;
+}
+.s0 .swiper-slide>img:nth-child(1){height: 100%;}
+.s0 img{
+  position: absolute; left: 50%; top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
   object-fit: cover;
 }
-
-/* .mySwiper .swiper-slide img.bg{
-  transform: scale(1);
-  transition: 4s;
+.s0 p img{top: 55%;}
+.mySwiper .swiper-slide p{
+  transform: scale(0.2);
+  transition: 2.5s;
 }
-.mySwiper .swiper-slide img.bg.on{
-  transform: scale(120%);
-} */
+.mySwiper .swiper-slide p.on{
+  transform: scale(1);
+}
 
 .mySwiper #btn{
   position: absolute; width: 95%; height: 50px;
@@ -439,18 +449,23 @@ footer>p img{
   /* header 시작 */
   header ul.nav{display: none;}
 
-   /* s1 시작 */
-   h3.sTitle{
-    font-size: 22px;
-    text-underline-offset: 13px;
-    text-decoration-thickness: 4.5px;
-   }
-   .mySwiper1 .swiper-slide a p:nth-child(2){
-    font-size: 15px;
-    letter-spacing: 2px;
-   }
+  /* s0 시작 */
+  .mySwiper .swiper-slide p.on{
+    transform: scale(1.1);
+  }
 
-   /* s2 시작 */
+  /* s1 시작 */
+  h3.sTitle{
+  font-size: 22px;
+  text-underline-offset: 13px;
+  text-decoration-thickness: 4.5px;
+  }
+  .mySwiper1 .swiper-slide a p:nth-child(2){
+  font-size: 15px;
+  letter-spacing: 2px;
+  }
+
+  /* s2 시작 */
    .s2 ul.contents li:nth-child(2) .txt:before{
     background-image: url(../images/s2_union_hov.png);
   }
@@ -507,5 +522,154 @@ footer>p img{
   }
   footer>p{
     width: 16%;
+  }
+}
+
+@media screen and (max-width:1024px){
+  /* s0 시작 */
+  .mySwiper .swiper-slide p.on{
+    transform: scale(1.2);
+  }
+
+  /* s1 시작 */
+  h3.sTitle{
+    font-size: 20px;
+  }
+
+  /* s2 시작 */
+  .s2 ul.contents li .image{
+    width: 60%;
+  }
+  .s2 ul.contents li .txt h2{
+    font-size: 25px;
+    line-height: 35px;
+    letter-spacing: 3px;
+  }
+  .s2 ul.contents li .txt p{
+    font-size: 14px;
+    line-height: 25px;
+  }
+  .s2 ul.contents li:nth-child(odd) .txt{
+    margin-left: 20px;
+  }
+  .s2 ul.contents li:nth-child(2) .txt{
+    margin-right: 20px;
+  }
+
+  /* s3 시작 */
+  .s3 .txt h1{
+    font-size: 60px;
+    letter-spacing: 20px;
+  }
+  .s3 .txt div{
+    font-size: 18px;
+  }
+
+  /* s4 시작 */
+  .s4 .s4_flex h3.sTitle{
+    transform: rotate(-90deg);
+    text-align: center;
+    margin-left: -10%;
+  }
+  .s4 > p{
+    left: -40%; top: 50%;
+    transform: translateY(-50%);
+    width: 75%;
+  }
+  .s4 .s4_flex .rTxt p{
+    font-size: 15px;
+  }
+  .s4 .s4_flex .rTxt p::after{
+    height: 2px;
+  }
+  .s4 .s4_flex .rTxt h4{
+    font-size: 15px;
+  }
+  .s4 .none{width: 0;}
+
+  /* footer 시작 */
+  footer>ul{
+    flex-direction: column;
+  }
+  footer>ul>li:nth-child(1){
+    border-bottom: 2px solid #ccc;
+    width: 100%;
+  }
+  footer>ul>li:nth-child(2){
+    width: 100%;
+  }
+  footer>ul>li:nth-child(2)>div.sup{
+    border-left: none;
+  }
+}
+@media screen and (max-width:768px){
+  /* s1 시작 */
+  h3.sTitle{
+    font-size: 18px;
+    text-decoration-thickness: 4px;
+    padding: 100px 0 70px;
+  }
+
+  /* s2 시작 */
+  .s2 ul.contents li{
+    flex-direction: column;
+    align-items: start;
+    margin-bottom: 70px;
+  }
+  .s2 ul.contents li:nth-child(2){
+    flex-direction: column;
+    align-items: end;
+  }
+  .s2 ul.contents li .image{
+    width: 95%;
+  }
+  .s2 ul.contents li:nth-child(2) .txt:before{
+    left: -50px; top: 25px;
+    width: 70px; height: 43px;
+  }
+  .s2 ul.contents li:nth-child(odd) .txt:before{
+    right: -50px; top: 25px;
+    width: 70px; height: 43px;
+  }
+  .s2 ul.contents li .txt h2{
+    margin-top: 30px;
+  }
+  .s2 ul.contents li .txt h2 br{display: none;}
+  .s2 ul.contents li .txt p{display: none;}
+
+  /* s3 시작 */
+  .s3 .txt h1{
+    font-size: 40px;
+    letter-spacing: 10px;
+    margin-bottom: 100px;
+  }
+  .s3 .txt div{ 
+    font-size: 15px;
+  }
+}
+
+@media screen and (max-width:480px){
+  /* s2 시작 */
+  .s2 ul.contents li:nth-child(2) .txt:before{
+    left: -30px; top: 5px;
+    width: 60px; height: 37px;
+  }
+  .s2 ul.contents li:nth-child(odd) .txt:before{
+    right: -30px; top: 5px;
+    width: 60px; height: 37px;
+  }
+  .s2 ul.contents li .txt h2{
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  /* s3 시작 */
+  .s3 .txt h1{
+    font-size: 30px;
+    letter-spacing: 10px;
+    margin-bottom: 100px;
+  }
+  .s3 .txt div{ 
+    font-size: 15px;
   }
 }
