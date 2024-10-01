@@ -13,12 +13,12 @@ $(function(){
     $("header").css({"background-color":"rgba(255, 255, 255, .3)"});
   });
 
-  $("header .logo").hover(function(){
+  $("header .logo a").hover(function(){
     $("header").css({"background-color":"rgba(255, 255, 255, 1)"});
-    $("header .logo a").html('<img src="images/header_logo_color.png" alt="header_logo">');
+    $("header .logo a img").attr("src","images/header_logo_color.png");
   },function(){
     $("header").css({"background-color":"rgba(255, 255, 255, .3)"});
-    $("header .logo a").html('<img src="images/header_logo.png" alt="header_logo">');
+    $("header .logo a img").attr("src","images/header_logo.png");
   });
 
 

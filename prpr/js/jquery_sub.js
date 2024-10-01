@@ -13,6 +13,14 @@ $(function(){
     $("header").css({"background-color":"rgba(255, 255, 255, .3)"});
   });
 
+  $("header .logo a").hover(function(){
+    $("header").css({"background-color":"rgba(255, 255, 255, 1)"});
+    $("header .logo a img").attr("src","images/header_logo_color.png");
+  },function(){
+    $("header").css({"background-color":"rgba(255, 255, 255, .3)"});
+    $("header .logo a img").attr("src","images/header_logo.png");
+  });
+
 
   $('#fullpage').fullpage({
     verticalCentered: true,
