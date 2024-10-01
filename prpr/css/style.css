@@ -219,7 +219,7 @@ header ul.right > li:hover>a{
 }
 .mySwiper1 .swiper-scrollbar{
   width: 30%; height: 7px;
-  bottom: -30px;
+  bottom: -35px;
   left: 50%; transform: translateX(-50%);
   border-radius: 0;
 }
@@ -488,10 +488,18 @@ a#MOVE_TOP_BTN img{
 
 
 @media screen and (max-width:1500px) {
+  /* s0 시작 */
+  .mySwiper .swiper-scrollbar{
+    bottom: 10%; left: 15%;
+  }
+
   /* s1 시작 */
-    .mySwiper1 .swiper-slide a p:nth-child(1){
-      aspect-ratio: 1 / 1.25;
-    }
+  .mySwiper1 .swiper-slide a p:nth-child(1){
+    aspect-ratio: 1 / 1.25;
+  }
+  .mySwiper1 .swiper-scrollbar{
+    bottom: -50px;
+  }
 }
 @media screen and (max-width:1280px) {
   /* header 시작 */
@@ -500,6 +508,9 @@ a#MOVE_TOP_BTN img{
   /* s0 시작 */
   .mySwiper .swiper-slide p.on{
     transform: scale(1.1);
+  }
+  .mySwiper .swiper-scrollbar{
+    bottom: 15%; left: 15%;
   }
 
   /* s1 시작 */
@@ -581,6 +592,9 @@ a#MOVE_TOP_BTN img{
   .mySwiper .swiper-slide p.on{
     transform: scale(1.2);
   }
+  .mySwiper .swiper-scrollbar{
+    bottom: 17%; left: 10%;
+  }
 
   /* s1 시작 */
   h3.sTitle{
@@ -653,6 +667,14 @@ a#MOVE_TOP_BTN img{
     border-left: none;
   }
 }
+
+@media screen and (max-width:880px){
+  /* s0 시작 */
+  .mySwiper .swiper-scrollbar{
+    bottom: 20%;
+  }
+}
+
 @media screen and (max-width:768px){
   /* s0 시작 */
   .s0 img.txtW{display: none;}
@@ -660,6 +682,11 @@ a#MOVE_TOP_BTN img{
     display: inline; width: 90%;
     top: 55%;
   }
+  .mySwiper .swiper-scrollbar{
+    bottom: 5%; left: 50%;
+    transform: translateX(-50%);
+  }
+
   /* s1 시작 */
   .swiperWrap{
     display: flex; align-items: center;
@@ -737,6 +764,10 @@ a#MOVE_TOP_BTN img{
 @media screen and (max-width:599px){
   /* s1 시작 */
   .swiperWrap{width: 60%;}
+  .mySwiper1 .swiper-scrollbar{
+    width: 50%;
+    bottom: -50px;
+  }
 }
 
 @media screen and (max-width:480px){
