@@ -136,7 +136,7 @@ header ul.right > li:hover>a{
 
 /* s1 시작 */
 .s1{
-  width: 90%; max-width: 1300px;
+  width: 100%;
   margin: 200px auto;
   text-align: center;
 }
@@ -146,8 +146,11 @@ header ul.right > li:hover>a{
   font-size: 18px;
   line-height: 50px;
 }
+.s1 .text p{
+  margin: 15px 0;
+}
 .s1 > p{
-  width: 70%; margin: 100px auto;
+  width: 60%; margin: 100px auto;
 }
 .s1 > p img{
   width: 100%; object-fit: cover;
@@ -335,6 +338,29 @@ footer>p img{
   width: 100%; height: 100%; object-fit: cover;
 }
 
+/* top버튼 시작 */
+a#MOVE_TOP_BTN{
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  display: none;
+  z-index: 999;
+  width: 50px; height: 50px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(0, 0, 0, .15);
+  line-height: 50px;
+}
+a#MOVE_TOP_BTN img{
+  vertical-align: middle;
+  margin-top: -2px;
+}
+
+
+
+
+
+
 
 @media screen and (max-width:1280px) {
   /* header 시작 */
@@ -390,6 +416,9 @@ footer>p img{
   .s4 p.text{
     font-size: 18px;
   }
+  .s4 p.logo{
+    width: 350px;
+  }
 
   /* footer 시작 */
   footer>ul>li h4{
@@ -420,9 +449,16 @@ footer>p img{
   }
 
   /* s1 시작 */
+  .s1{
+    margin: 150px auto;
+  }
   .s1 .text{
     font-size: 16px;
     line-height: 40px;
+  }
+  .s1 > p{
+    width: 70%;
+    margin: 50px auto;
   }
 
   /* s2 시작 */
@@ -430,7 +466,7 @@ footer>p img{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 30px;
+    gap: 35px;
   }
   .s2 .left{
     position: static;
@@ -443,6 +479,7 @@ footer>p img{
     font-size: 15px;
     line-height: 30px;
     position: static;
+    gap: 25px;
   }
   .s2 .right{
     width: 100px;
@@ -503,13 +540,24 @@ footer>p img{
     font-size: 15px;
   }
 
+  /* s1 시작 */
+  .s1{
+    margin: 130px auto;
+  }
+  .s1 .text{
+    font-size: 15px;
+    line-height: 35px;
+  }
+  .s1 > p{
+    width: 80%; /* margin: 50px auto; */
+  }
+
   /* s2 시작 */
   .s2 .left{
     min-width: 380px;
   }
   .s2 .text{
     font-size: 14px;
-    gap: 25px;
   }
 
   /* footer 시작 */
@@ -534,9 +582,18 @@ footer>p img{
     line-height: 25px;
     text-align: center;
   }
+
+  /* s4 시작 */
+  .s4 p.text{
+    font-size: 17px;
+  }
+  .s4 p.text br.M{display: block;}
+  .s4 p.logo{
+    width: 300px;
+  }
 }
 
-@media screen and (max-width:480px){
+@media screen and (max-width:500px){
 
   /* s0 시작 */
   .s0 .txt h1{
@@ -548,7 +605,22 @@ footer>p img{
     font-size: 15px;
   }
 
-    /* s2 시작 */
+  /* s1 시작 */
+  .s1{
+    margin: 120px auto;
+  }
+  .s1 .text{
+    font-size: 14px;
+    line-height: 30px;
+  }
+  .s1 > p{
+    width: 100%; /* margin: 50px auto; */
+  }
+
+  /* s2 시작 */
+  .s2{
+    gap: 50px;
+  }
   .s2 .text{
     font-size: 13px;
     line-height: 25px;
@@ -563,7 +635,15 @@ footer>p img{
     text-align: center;
     font-size: 13px;
   }
-}
+
+    /* s4 시작 */
+    .s4 p.text{
+      font-size: 16px;
+      line-height: 40px;
+    }
+    .s4 p.logo{
+      width: 250px;
+    }
 
   /* footer 시작 */
   footer>ul>li h4{
