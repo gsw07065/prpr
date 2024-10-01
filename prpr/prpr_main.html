@@ -139,6 +139,7 @@
                 <div class="swiper-button-next"></div>
                 <div class="swiper-button-prev"></div>
               </div>
+              <div class="swiper-scrollbar"></div>
             </div>
           </div>
         </div>
@@ -266,10 +267,6 @@
       autoplay:{
         delay: 6000,
       },
-     /*  pagination: {
-        el: ".swiper-pagination",
-        clickable: true,
-      }, */
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
@@ -284,6 +281,12 @@
             slide[i].querySelector("p").classList.remove("on");
           }
           slide[this.realIndex].querySelector("p").classList.add("on");
+          
+         /*  if(i=3){
+            document.querySelector(".mySwiper .swiper-scrollbar").style.backgroundColor="rgba(255, 255, 255, .3)";
+          }else{
+            document.querySelector(".mySwiper .swiper-scrollbar").style.backgroundColor="rgba(0, 0, 0, .3)";
+          }; */
         }
       }
     });
@@ -294,6 +297,14 @@
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
+      },
+/*       pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      }, */
+      scrollbar: {
+        el: ".swiper-scrollbar",
+        clickable: true,
       },
       breakpoints: {
         1100: {

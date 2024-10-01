@@ -146,33 +146,41 @@ header ul.right > li:hover>a{
 .mySwiper #btn .swiper-button-prev:after{
   font-size: 1.1em; color: #000; font-weight: bold;
 }
-.swiper-scrollbar{
-  background-color: rgba(255, 255, 255, .3);
+.mySwiper .swiper-scrollbar{
+  background-color: rgba(255, 255, 255, .25);
+  height: 8px;
+  bottom: 15px; left: 10%;
+  width: 30%;
 }
-.swiper-scrollbar-drag{
-  background-color: rgba(0, 0, 0, .4);
+.mySwiper .swiper-scrollbar-drag{
+  background-color: rgba(0, 0, 0, .45);
 }
 
 
 /* s1 시작 */
 .s1{
   width: 100%; height: 100vh;
+  background-color: #FF7700;
 }
-.swiperWrap{width: 100%; position: relative;}
+.swiperWrap{
+  margin: 0 auto;
+  width: 90%; max-width: 1700px;
+  position: relative;
+  height: 60%; overflow: hidden;
+}
 .mySwiper1{
-  width: 87%; position: static;
+  width: 100%; /* position: static; */
   /* overflow:  visible; */
+  overflow: visible;
 }
 .mySwiper1 .swiper-wrapper{
   width: 100%; height: 100%;
   text-align: center;
-  /* overflow: hidden; */
 }
 .mySwiper1 .swiper-slide{
   width: 400px;
   border: 2px solid #000;
   box-sizing: border-box;
-  margin-left: -2px;
   border-radius: 500px 500px 0 0;
   overflow: hidden;
 }
@@ -208,6 +216,16 @@ header ul.right > li:hover>a{
 .mySwiper1 #btn .swiper-button-next:after,
 .mySwiper1 #btn .swiper-button-prev:after{
   font-size: 1.7em; color: #000;
+}
+.mySwiper1 .swiper-scrollbar{
+  width: 30%; height: 7px;
+  bottom: -30px;
+  left: 50%; transform: translateX(-50%);
+  border-radius: 0;
+}
+.mySwiper1 .swiper-scrollbar-drag{
+  background-color: #000;
+  border-radius: 0;
 }
 
 
@@ -469,7 +487,12 @@ a#MOVE_TOP_BTN img{
 
 
 
-
+@media screen and (max-width:1500px) {
+  /* s1 시작 */
+    .mySwiper1 .swiper-slide a p:nth-child(1){
+      aspect-ratio: 1 / 1.25;
+    }
+}
 @media screen and (max-width:1280px) {
   /* header 시작 */
   header ul.nav{display: none;}
@@ -484,6 +507,9 @@ a#MOVE_TOP_BTN img{
   font-size: 22px;
   text-underline-offset: 13px;
   text-decoration-thickness: 4.5px;
+  }
+  .mySwiper1 .swiper-slide a p:nth-child(1){
+    aspect-ratio: 1 / 1.3;
   }
   .mySwiper1 .swiper-slide a p:nth-child(2){
   font-size: 15px;
@@ -635,10 +661,16 @@ a#MOVE_TOP_BTN img{
     top: 55%;
   }
   /* s1 시작 */
+  .swiperWrap{
+    display: flex; align-items: center;
+  }
   h3.sTitle{
     font-size: 18px;
     text-decoration-thickness: 4px;
     padding: 100px 0 70px;
+  }
+  .s1 h3.sTitle{
+    padding: 140px 0 70px;
   }
 
   /* s2 시작 */
@@ -700,6 +732,11 @@ a#MOVE_TOP_BTN img{
   footer>p{
     display: none;
   }
+}
+
+@media screen and (max-width:599px){
+  /* s1 시작 */
+  .swiperWrap{width: 60%;}
 }
 
 @media screen and (max-width:480px){
