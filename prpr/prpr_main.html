@@ -21,7 +21,7 @@
 
     <header>
       <div class="head_bg"></div>
-        <p class="logo"><img src="images/header_logo.png" alt="header_logo"></p>
+        <p class="logo"><a href="#"><img src="images/header_logo.png" alt="header_logo"></a></p>
         <ul class="nav">
           <li><a href="#">BRAND</a></li>
           <li>
@@ -294,6 +294,10 @@
       slidesPerView: 4,
       spaceBetween: 0,
       loop: true,
+      speed: 700,
+      autoplay:{
+        delay: 3000,
+      },
       navigation: {
         nextEl: ".swiper-button-next",
         prevEl: ".swiper-button-prev",
