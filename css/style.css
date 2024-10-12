@@ -151,9 +151,10 @@ header ul.right > li:hover>a{
   height: 8px;
   bottom: 15px; left: 10%;
   width: 30%;
+  border-radius: 0;
 }
 .mySwiper .swiper-scrollbar-drag{
-  background-color: rgba(0, 0, 0, .45);
+  background-color: rgba(0, 0, 0, .45); border-radius: 0;
 }
 
 
